@@ -1,12 +1,13 @@
 import requests
 from lxml import etree
 
-response = requests.get('https://magic.wizards.com/en/news')
-
-parser = etree.HTMLParser()
-root = etree.fromstring(response.text, parser)
-
 def rss():
+
+  response = requests.get('https://magic.wizards.com/en/news')
+
+  parser = etree.HTMLParser()
+  root = etree.fromstring(response.text, parser)
+
   r = """\
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">

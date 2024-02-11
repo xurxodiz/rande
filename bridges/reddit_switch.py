@@ -3,10 +3,11 @@ import json
 import html
 import requests
 
-response = requests.get('https://www.reddit.com/r/NintendoSwitch.json')
-data = json.loads(response.text)
-
 def rss():
+
+  response = requests.get('https://www.reddit.com/r/NintendoSwitch.json')
+  data = json.loads(response.text)
+
   r = """\
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
