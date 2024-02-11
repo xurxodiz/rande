@@ -1,7 +1,5 @@
 from flask import Flask, Response
-from magic_news import rss as magic_news_rss
-from praza import rss as praza_rss
-from reddit_switch import rss as reddit_switch_rss
+from bridges import magic_news, praza, reddit_switch
 
 app = Flask(__name__)
 
@@ -11,17 +9,17 @@ def hello():
 
 @app.route("/magic_news")
 def magic_news():
-    txt = magic_news_rss()
+    txt = magic_news.rss()
     return Response(txt, mimetype="application/rss+xml")
 
 @app.route("/praza")
 def praza():
-    txt = praza_rss()
+    txt = praza.rss()
     return Response(txt, mimetype="application/rss+xml")
 
 @app.route("/reddit/NintendoSwitch")
 def reddit_switch():
-    txt = reddit_switch_rss()
+    txt = reddit_switch.rss()
     return Response(txt, mimetype="application/rss+xml")
 
 if __name__ == "__main__":
