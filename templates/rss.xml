@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+
+    <channel>
+      <title>{{ feed.title }}</title>
+      <link>{{ feed.link }}</link>
+      <description>{{ feed.description }}</description>
+
+      {% for item in feed.itemlist %}
+      <item>
+
+        {% if item.pubDate %}
+        <pubDate>{{ item.pubDate }}</pubDate>
+        {% endif %}
+
+        <title>{{ item.title }}</title>
+        <link>{{ item.link }}</link>
+
+        {% if item.description %}
+        <description>{{ item.description }}</description>
+        {% endif %}
+
+        {% if item.media_thumbnail %}
+        <media:thumbnail url="{{ item.media_thumbnail }}" />
+        {% endif %}
+
+      </item>
+      {% endfor %}
+
+    </channel>
+</rss>
