@@ -4,21 +4,21 @@ from bridges import magic_news, praza, reddit_switch
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
+def route_hello():
     return ":)"
 
 @app.route("/magic_news")
-def magic_news():
+def route_magic_news():
     txt = magic_news.rss()
     return Response(txt, mimetype="application/rss+xml")
 
 @app.route("/praza")
-def praza():
+def route_praza():
     txt = praza.rss()
     return Response(txt, mimetype="application/rss+xml")
 
 @app.route("/reddit/NintendoSwitch")
-def reddit_switch():
+def route_reddit_switch():
     txt = reddit_switch.rss()
     return Response(txt, mimetype="application/rss+xml")
 
