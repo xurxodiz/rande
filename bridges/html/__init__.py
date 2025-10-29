@@ -1,2 +1,1 @@
-from .magic_news import MagicNews
-from .praza import Praza
+from .magic_wizards_com import MagicWizardsCom

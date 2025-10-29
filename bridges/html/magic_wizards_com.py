@@ -2,7 +2,7 @@ from lxml import etree
 
 from .html_feed import HtmlFeed
 
-class MagicNews(HtmlFeed):
+class MagicWizardsCom(HtmlFeed):
 
   def __init__(self):
     super().__init__('https://magic.wizards.com/en/news')
@@ -22,7 +22,7 @@ class MagicNews(HtmlFeed):
       if (header := article.find(".//h3")) is not None:
           item["title"] = header.text
 
-      if (url := article.find(".//a[@data-link-type='router']")) is not None:
+      if (url := article.find(".//a[@data-link-type='forced-server']")) is not None:
           item["link"] = f"https://magic.wizards.com{url.get('href')}"
 
       if (p := article.find(".//p")) is not None:

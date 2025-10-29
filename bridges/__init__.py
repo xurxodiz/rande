@@ -1,1 +1,1 @@
-from .html import MagicNews, Praza
+from .html import MagicWizardsCom

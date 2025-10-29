@@ -17,11 +17,7 @@ It will be available in your browser in port 5000. If you are running Nginx, you
 Contents
 --------
 
-At the moment if offers four RSS bridges:
+At the moment if offers just one RSS bridge:
 
-- Two scrapped from HTML:
-  - `/magic_news` for https://magic.wizards.com/en/news
-  - `/praza` for https://praza.gal/
-- Two subreddits:
-  - `/r/NintendoSwitch` for https://reddit.com/r/NintendoSwitch/
-  - `/r/truegaming` for https://reddit.com/r/truegaming/
+- Scrapped from HTML:
+  - `/magic.wizards.com` for https://magic.wizards.com/en/news
