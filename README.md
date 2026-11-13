@@ -6,9 +6,7 @@ RSS bridges for websites without a feed. Named after the [Ponte de Rande](https:
 Usage
 -----
 
-Create your own Python virtual environment (eg with `virtualenvwrapper`).
-
-Activate it and install all dependencies: `pip install -r requirements.txt`.
+Install dependencies with `uv sync`.
 
 You can then launch the Flask/Gunicorn application through PM2 (if you have it) by going running `pm2 start` from inside this folder.
 
