@@ -8,9 +8,15 @@ Usage
 
 Install dependencies with `uv sync`.
 
-You can then launch the Flask/Gunicorn application through PM2 (if you have it) by going running `pm2 start` from inside this folder.
+Then you can run `supervisord` in this folder and gunicorn/flask will do the rest.
 
 It will be available in your browser in port 5000. If you are running Nginx, you may want to set up a reverse proxy.
+
+If you want to ensure it is restarted after reboots, run `crontab -e` and add this:
+
+```
+@reboot cd /path/to/rande && supervisord
+```
 
 Contents
 --------

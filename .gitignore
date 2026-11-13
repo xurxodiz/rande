@@ -1,1 +1,4 @@
 __pycache__
+supervisor.sock
+supervisord.pid
+supervisord.log
